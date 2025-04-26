@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5em;
+    color: #E50914;
+    margin-bottom: 20px;
+}
+
+/* Authentication Forms */
+#auth-container {
+    max-width: 400px;
+    margin: 20px auto;
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+.auth-form h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #E50914;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #333;
+    color: white;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-form button:hover {
+    background-color: #B20710;
+}
+
+.auth-form p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.auth-form a {
+    color: #E50914;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+/* Logout Button */
+#logout-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #B20710;
+}
+
+/* Filters Section */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #E50914;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #B20710;
+}
+
+/* Movies Grid */
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Movie Cards */
+.movie {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.movie p {
+    font-size: 14px;
+    opacity: 0.8;
+}
