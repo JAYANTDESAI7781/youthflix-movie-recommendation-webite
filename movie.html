@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIEMATE - Movie Recommendation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with logo and user profile -->
+        <header>
+            <div class="logo">YOUTHFLIX</div>
+            <div class="user-container">
+                <img src="c:\Users\jayan\OneDrive\Pictures\user login.jpg" alt="User Profile" class="userprofile" onerror="this.src='images/default-login.jpg'">
+                <span class="username" id="username">User</span>
+            </div>
+        </header>
+
+        <!-- Trending Section - Will be shown after login -->
+        <section id="trending-section">
+            <!-- Content will be populated by JavaScript -->
+        </section>
+
+        <!-- Main Title -->
+        <h1>Discover Your Next Favorite</h1>
+        
+        <!-- Filters Section -->
+        <div class="filters">
+            <select id="type">
+                <option value="movie">Movies</option>
+                <option value="tv">Web Series / TV shows</option>
+            </select>
+            <select id="genre">
+                <option value="">Select Genre</option>
+                <option value="28">Action</option>
+                <option value="35">Comedy</option>
+                <option value="18">Drama</option>
+                <option value="27">Horror</option>
+                <option value="10749">Romance</option>
+                <option value="878">Sci-Fi</option>
+                <option value="16">Animation</option>
+                <option value="53">Thriller</option>
+                <option value="80">Crime</option>
+                <option value="99">Documentary</option>
+                <option value="9805">Sports</option>
+                <option value="10751">Family</option>
+                <option value="10770">TV movies</option>
+                <option value="10768">Politics</option>
+                <option value="10762">Kids</option>
+                <option value="70">Western</option>
+                <option value="10764">Reality Shows</option>
+            </select>
+            <select id="language">
+                <option value="">Select Language</option>
+                <option value="en">English</option>
+                <option value="ko">Korean</option>
+                <option value="es">Spanish</option>
+                <option value="ja">japanese</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="ml">Malayalam</option>
+                <option value="kn">Kannada</option>
+                <option value="mr">Marathi</option>
+                <option value="bn">Bengali</option>
+                <option value="pa">Punjabi</option>
+                <option value="gu">Gujarati</option>
+                <option value="as">Assamese</option>
+            </select>
+            <button id="recommend-btn" onclick="fetchMovies()">Get Recommendations</button>
+        </div>
+        
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search movies or shows...">
+                <button onclick="searchMovies()" class="search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Categories Section (can be populated dynamically) -->
+        <div class="categories-section">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="category-pills">
+                <button class="category-pill" onclick="setGenre('28')">Action</button>
+                <button class="category-pill" onclick="setGenre('35')">Comedy</button>
+                <button class="category-pill" onclick="setGenre('18')">Drama</button>
+                <button class="category-pill" onclick="setGenre('10749')">Romance</button>
+                <button class="category-pill" onclick="setGenre('27')">Horror</button>
+            </div>
+        </div>
+
+        <!-- Movies Grid Container -->
+        <div class="movies" id="movies">
+            <!-- Movies will be populated here -->
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">YOUTHFLIX</div>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="user-actions">
+                    <button id="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+            <div class="copyright">© 2025 YOUTHFLIX. All rights reserved.</div>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to YOUTHFLIX</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn-submit">Login</button>
+                <p class="form-switch">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
