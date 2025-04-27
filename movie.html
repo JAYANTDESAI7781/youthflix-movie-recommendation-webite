@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOVIEMATE - Movie Recommendation</title>
+    <title>YOUTHFLIX - Movie Recommendation</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="movie.css">
 </head>
@@ -11,12 +11,22 @@
     <div class="container">
         <!-- Header with logo and user profile -->
         <header>
-            <div class="logo">YOUTHFLIX</div>
+            
             <div class="user-container">
-                <img src="c:\Users\jayan\OneDrive\Pictures\user login.jpg" alt="User Profile" class="userprofile" onerror="this.src='images/default-login.jpg'">
-                <span class="username" id="username">User</span>
+                <img src="images/user-profile.jpg" alt="User Profile" class="userprofile" onerror="this.src='images/default-user.png'">
+                <span class="username" id="username">Guest</span>
+                <button id="watchlist-btn" onclick="displayWatchlist()">My Watchlist</button>
             </div>
         </header>
+        <!-- Movie Details Modal -->
+<div id="movie-details-modal" class="modal">
+    <div class="modal-content movie-details-content">
+        <span class="close-modal" onclick="closeMovieModal()">&times;</span>
+        <div id="movie-details-container">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
 
         <!-- Trending Section - Will be shown after login -->
         <section id="trending-section">
