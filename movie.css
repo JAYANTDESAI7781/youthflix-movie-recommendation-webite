@@ -1118,3 +1118,128 @@ footer {
         height: 300px;
     }
 }
+/* Add this to your movie.css file */
+
+/* Footer Link Modal Styles */
+.footer-link-content {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+.footer-link-content h3 {
+    color: #e50914;
+    margin-bottom: 15px;
+}
+
+.footer-link-content h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-link-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.footer-link-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-link-content li {
+    margin-bottom: 5px;
+}
+
+/* Contact Form Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #e50914;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #b20710;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+#contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+.contact-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* General Modal Improvements */
+.modal-content {
+    padding: 25px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 15px;
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+}
